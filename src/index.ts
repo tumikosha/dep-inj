@@ -1,5 +1,9 @@
 import { Users } from './services/users';
 import { Logger } from './services/logger';
+import { createIoCContainer } from './ioc/index';
+
+const ioc = createIoCContainer();
+
 
 import type { User, ApiConfig } from './types';
 
@@ -25,8 +29,9 @@ const app = () => {
 };
 
 window.onload = (event: Event) => {
-  const logger = new Logger();
 
+  const logger = new Logger();
+  logger.info('------------|||------------');
   logger.info('Page is loaded.');
 
   app();

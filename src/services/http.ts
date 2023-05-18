@@ -1,8 +1,11 @@
 import { Logger } from './logger';
+// import { ILogger } from './logger';
+// import { ILogger } from './i_logger';
 
 import type { ApiConfig } from '../types';
 export class HTTP {
   logger: Logger;
+//    logger: ILogger;
   apiConfig: ApiConfig;
 
   constructor(apiConfig: ApiConfig) {
